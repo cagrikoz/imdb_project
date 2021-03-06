@@ -1,1 +1,0 @@
-select te.tconst, tb.original_title, te.season_number, te.episode_number, tr.num_votes from imdb.title_episode te left join imdb.title_ratings tr on tr.tconst = te.tconst left join imdb.title_basics tb on tb.tconst = te.tconst where te.parent_tconst = 'tt0944947' order by tr.num_votes asc limit 5;
